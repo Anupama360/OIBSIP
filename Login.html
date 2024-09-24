@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login System</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>After Successful Registration, You Can Log In</h1>
+    </div>
+
+    <div class="container">
+        <!-- Registration Box -->
+        <div class="box" id="register-box">
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="username-reg">Username:</label>
+                <input type="text" id="username-reg" required>
+                
+                <label for="password-reg">Password:</label>
+                <input type="password" id="password-reg" required>
+                <div class="message" id="password-message">
+                    Create a strong password:
+                    <ul>
+                        <li>At least 8 characters</li>
+                        <li>Includes uppercase and lowercase letters</li>
+                        <li>Contains a number and a special character</li>
+                    </ul>
+                </div>
+                
+                <button type="button" onclick="register()">Register</button>
+                <p id="register-success"></p>
+            </form>
+        </div>
+
+        <!-- Login Box -->
+        <div class="box" id="login-box">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username-login">Username:</label>
+                <input type="text" id="username-login" required>
+                
+                <label for="password-login">Password:</label>
+                <input type="password" id="password-login" required>
+                
+                <button type="button" onclick="login()">Login</button>
+                <p id="login-error"></p>
+                <p id="login-success"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="Login.js"></script>
+</body>
+</html>
